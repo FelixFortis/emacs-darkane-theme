@@ -23,7 +23,7 @@
   "Dark color theme adapted from Andre Richter's Lush theme.
   See  https://github.com/felixfortis/emacs-darkane-theme")
 
-(let* ((darkane/background "#0000a1")
+(let* ((darkane/background "#00001a")
        (darkane/foreground "#E0E0E0")
        (darkane/turquoise  "#2AA198")
        (darkane/orange     "#FF951B")
