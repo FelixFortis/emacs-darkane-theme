@@ -12,74 +12,56 @@
 ;; Darkane, A Dark Theme with strong colors for Emacs24+
 ;;
 ;; Change History:
-;;   Andre Richter, 2014-09:
+;;   Adam Wenham, 2016-11:
 ;;     * Changed colors for personal taste
-;;     * Made Emacs24 out-of-the-box compatible
 ;;
 ;;
-;; This theme is based on JD Huntington's Blackboard theme.
-;; Following is the original info from the theme (with obsolete install instructions):
-;;
-;;   Blackboard Colour Theme for Emacs.
-;;
-;;   Defines a colour scheme resembling that of the original TextMate Blackboard colour theme.
-;;   To use add the following to your .emacs file (requires the color-theme package):
-;;
-;;   (require 'color-theme)
-;;   (color-theme-initialize)
-;;   (load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-;;
-;;   And then (color-theme-blackboard) to activate it.
-;;
-;;   MIT License Copyright (c) 2008 JD Huntington <jdhuntington at gmail dot com>
-;;   Credits due to the excellent TextMate Blackboard theme
-;;
-;;   All patches welcome
+;; This theme is based on Andre Richter's Lush theme.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Code:
 (deftheme darkane
-  "Dark color theme adapted from JD Huntington's TextMate Blackboard theme by Andre Richter.
-  See https://github.com/andre-richter/emacs-lush-theme")
+  "Dark color theme adapted from Andre Richter's Lush theme.
+  See  https://github.com/felixfortis/emacs-darkane-theme")
 
-(let* ((lush/background "#202020")
-       (lush/foreground "#E0E0E0")
-       (lush/turquoise  "#2AA198")
-       (lush/orange     "#FF951B")
-       (lush/pink       "#FF88FF")
-       (lush/yellow     "#FFE329")
-       (lush/green      "#61CE3C")
-       (lush/light-blue "#82A6DF")
-       (lush/dark-blue  "#284050")
-       (lush/light-red  "#FA583F")
-       (lush/hl-line    "#333333"))
+(let* ((darkane/background "#0000a1")
+       (darkane/foreground "#E0E0E0")
+       (darkane/turquoise  "#2AA198")
+       (darkane/orange     "#FF951B")
+       (darkane/pink       "#FF88FF")
+       (darkane/yellow     "#FFE329")
+       (darkane/green      "#61CE3C")
+       (darkane/light-blue "#82A6DF")
+       (darkane/dark-blue  "#284050")
+       (darkane/light-red  "#FA583F")
+       (darkane/hl-line    "#333333"))
 
   (custom-theme-set-faces
-   `lush
+   `darkane
    `(bold                         ((t (:bold t))))
    `(bold-italic                  ((t (:bold t))))
    `(border-glyph                 ((t (nil))))
-   `(default                      ((t (:foreground ,lush/foreground :background ,lush/background))))
-   `(fringe                       ((t (:background ,lush/background))))
-   `(buffers-tab                  ((t (:foreground ,lush/foreground :background ,lush/background))))
+   `(default                      ((t (:foreground ,darkane/foreground :background ,darkane/background))))
+   `(fringe                       ((t (:background ,darkane/background))))
+   `(buffers-tab                  ((t (:foreground ,darkane/foreground :background ,darkane/background))))
    `(font-lock-builtin-face       ((t (:foreground "Khaki"))))
-   `(font-lock-comment-face       ((t (:foreground ,lush/turquoise :italic t))))
-   `(font-lock-constant-face      ((t (:foreground ,lush/orange))))
+   `(font-lock-comment-face       ((t (:foreground ,darkane/turquoise :italic t))))
+   `(font-lock-constant-face      ((t (:foreground ,darkane/orange))))
    `(font-lock-doc-face           ((t (:foreground "SlateGray"))))
-   `(font-lock-doc-string-face    ((t (:foreground ,lush/orange))))
-   `(font-lock-string-face        ((t (:foreground ,lush/green))))
-   `(font-lock-function-name-face ((t (:foreground ,lush/pink))))
-   `(font-lock-keyword-face       ((t (:foreground ,lush/yellow))))
+   `(font-lock-doc-string-face    ((t (:foreground ,darkane/orange))))
+   `(font-lock-string-face        ((t (:foreground ,darkane/green))))
+   `(font-lock-function-name-face ((t (:foreground ,darkane/pink))))
+   `(font-lock-keyword-face       ((t (:foreground ,darkane/yellow))))
    `(font-lock-preprocessor-face  ((t (:foreground "Aquamarine"))))
-   `(font-lock-type-face          ((t (:foreground ,lush/light-blue))))
-   `(font-lock-variable-name-face ((t (:foreground ,lush/light-red))))
-   `(font-lock-negation-char-face ((t (:foreground ,lush/pink))))
-   `(font-lock-warning-face       ((t (:foreground "Pink"     :bold t))))   
-   `(gui-element                  ((t (:foreground "black"    :background "#D4D0C8"))))  
+   `(font-lock-type-face          ((t (:foreground ,darkane/light-blue))))
+   `(font-lock-variable-name-face ((t (:foreground ,darkane/light-red))))
+   `(font-lock-negation-char-face ((t (:foreground ,darkane/pink))))
+   `(font-lock-warning-face       ((t (:foreground "Pink"     :bold t))))
+   `(gui-element                  ((t (:foreground "black"    :background "#D4D0C8"))))
    `(mode-line                    ((t (:foreground "#F0F0F0"  :background "#444444" :box nil))))
-   `(mode-line-highlight          ((t (:foreground ,lush/pink :box nil))))
-   `(hl-line                      ((t (:background ,lush/hl-line))))
+   `(mode-line-highlight          ((t (:foreground ,darkane/pink :box nil))))
+   `(hl-line                      ((t (:background ,darkane/hl-line))))
    `(text-cursor                  ((t (:foreground "black"    :background "yellow"))))
-   `(region                       ((t (:background ,lush/dark-blue))))
+   `(region                       ((t (:background ,darkane/dark-blue))))
    `(highlight                    ((t (:background "#222222"))))
    `(highline-face                ((t (:background "SeaGreen"))))
    `(italic                       ((t (nil))))
@@ -96,11 +78,11 @@
 	       (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;###autoload
-(defun lush-theme()
-  "Load lush-theme."
+(defun darkane-theme()
+  "Load darkane-theme."
   (interactive)
-  (load-theme 'lush t))
+  (load-theme 'darkane t))
 
-(provide-theme 'lush)
+(provide-theme 'darkane)
 
-;;; lush-theme.el ends here
+;;; darkane-theme.el ends here
